@@ -12,6 +12,21 @@ jobs:
         run: |
           echo "Running some linux commands..." 
           ls -la
-          pw
+          pwd
           uname -a
           echo "Done running linux commands!" 
+
+      - name: check which tools installed in this runner
+        run: |
+          echo "Checking which tools are installed in this runner..." 
+          which node
+          node --version
+          which npm
+          npm --version
+          which python
+          python --version
+          which java
+          java -version
+          terraform --version
+          aws --version
+          echo "Done checking tools!"
