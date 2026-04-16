@@ -12,6 +12,6 @@ jobs:
         run: |
           echo "Running some linux commands..." 
           ls -la
-          pwd
+          pw
           uname -a
           echo "Done running linux commands!" 
