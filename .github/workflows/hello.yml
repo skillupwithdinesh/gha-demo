@@ -7,10 +7,19 @@ on:
   schedule:
     - cron: '*/2 * * * *' # Runs every day at midnight
 
+env:
+  APP_NAME: HelloWorldApp
+  ENVIRONMENT: dev
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Printing env variables
+        run: |
+          echo "App Name: $APP_NAME"
+          echo "Environment: $ENVIRONMENT"
+          
       - name: Hello world action step
         run: echo "Hello world!"
 
