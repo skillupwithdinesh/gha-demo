@@ -4,12 +4,11 @@ on:
     branches: 
       - main
   workflow_dispatch:
-  schedule:
-    - cron: '*/2 * * * *' # Runs every day at midnight
 
 env:
   APP_NAME: HelloWorldApp
   ENVIRONMENT: dev
+  API_ENDPOINT: https://api.helloworldapp.com
 
 jobs:
   build:
@@ -19,7 +18,7 @@ jobs:
         run: |
           echo "App Name: $APP_NAME"
           echo "Environment: $ENVIRONMENT"
-          
+
       - name: Hello world action step
         run: echo "Hello world!"
 
