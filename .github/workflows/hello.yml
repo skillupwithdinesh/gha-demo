@@ -4,6 +4,8 @@ on:
     branches: 
       - main
   workflow_dispatch:
+  schedule:
+    - cron: '*/2 * * * *' # Runs every day at midnight
 
 jobs:
   build:
