@@ -27,6 +27,5 @@ jobs:
           python --version
           which java
           java -version
-          terraform --version
           aws --version
           echo "Done checking tools!"
