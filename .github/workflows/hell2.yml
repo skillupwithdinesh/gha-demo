@@ -1,0 +1,13 @@
+name: Another workflow
+on: 
+  push:
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Another workflow action step
+        run: echo "This is another workflow!"  
